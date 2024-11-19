@@ -1,11 +1,17 @@
+import { CategoriesRepository } from "../database/repositories/categories.repository";
+import { CategoryModel } from "../database/schemas/category.schema";
+import { createCategoryDTO } from "../dtos/categories.dtos";
 import { CategoriesService } from "../services/categories.services";
 import { Request, Response } from "express";
 
 export class CategoriesController{
-    async create(_: Request, res: Response) {
-        const service = new CategoriesService()
+    async create(req: Request<unknown, unknown, createCategoryDTO>, res: Response) {
+        const {color, title} = req.body
 
-        const result = await service.create()
+        const repository = new CategoriesRepository(CategoryModel)
+        const service = new CategoriesService(repository)
+
+        const result = await service.create({color, title})
 
         return res.status(201).json(result)
     }

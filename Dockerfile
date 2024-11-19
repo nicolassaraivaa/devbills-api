@@ -1,19 +1,13 @@
-FROM node:18-alpine
+FROM node:18
 
-# Cria e define o diretório de trabalho
-WORKDIR /home/app
+WORKDIR /app
 
-# Copia apenas os arquivos de dependências primeiro
 COPY package*.json ./
 
-# Instala as dependências
-RUN npm install
-
-# Copia o restante dos arquivos
 COPY . .
 
-# Expõe a porta que a aplicação usa
+RUN npm install
+
 EXPOSE 3333
 
-# Define o comando para rodar a aplicação
 CMD ["npm", "run", "dev"]
