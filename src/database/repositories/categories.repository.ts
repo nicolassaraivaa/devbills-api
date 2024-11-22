@@ -1,4 +1,3 @@
-import { promises } from "dns";
 import { Category } from "../../entities/category.entity";
 import { CategoryModel } from "../schemas/category.schema";
 
