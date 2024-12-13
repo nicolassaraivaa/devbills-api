@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsx watch ./src/server.ts"
+    "dev": "tsx watch ./src/server.ts",
+    "build": "tsc",
+    "start": "node ./build/src/server.js"
   },
   "keywords": [],
   "author": {
@@ -15,12 +17,14 @@
   "license": "ISC",
   "description": "DevBills API - Controle sua vida financeira pessoal de forma rápida e fácil",
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/node": "^22.9.0",
     "tsx": "^4.19.2",
     "typescript": "^5.6.3"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "http-status-codes": "^2.3.0",
@@ -28,4 +32,3 @@
     "zod": "^3.23.8"
   }
 }
-

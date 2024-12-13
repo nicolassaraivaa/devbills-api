@@ -22,3 +22,18 @@ export const indexTransactionSchema = {
 const indexTransactionsObject = z.object(indexTransactionSchema)
 
 export type IndexTransactionsDTO = z.infer<typeof indexTransactionsObject>
+
+export const getDashboardSchema = {
+    beginDate: z.coerce.date().optional(),
+    endDate: z.coerce.date().optional()
+}
+
+export const getDashboardObject = z.object(getDashboardSchema)
+export type GetDashborardDTO = z.infer<typeof getDashboardObject>
+
+export const getFinancialEvolutionSchema = {
+    year: z.string(),
+}
+
+const getFinancialEvolutionObject = z.object(getFinancialEvolutionSchema)
+export type GetFinancialEvolutionDTO = z.infer<typeof getFinancialEvolutionObject>

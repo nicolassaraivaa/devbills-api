@@ -22,8 +22,23 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+require("dotenv/config");
 const express_1 = __importStar(require("express"));
-const app = (0, express_1.default)();
-app.use((0, express_1.json)());
-app.listen(3333, () => console.log('🚀 App is runing at port 3333!'));
+const cors_1 = __importDefault(require("cors"));
+const database_1 = require("./database");
+const routes_1 = require("./routes");
+const error_handler_middleweres_1 = require("./middleweres/error-handler.middleweres");
+(0, database_1.setupMongo)().then(() => {
+    const app = (0, express_1.default)();
+    app.use((0, cors_1.default)({
+        origin: process.env.FRONT_URL
+    }));
+    app.use((0, express_1.json)());
+    app.use(routes_1.routes);
+    app.use(error_handler_middleweres_1.errorHandler);
+    app.listen(3333, () => console.log('🚀 App is runing at port 3333!'));
+});
