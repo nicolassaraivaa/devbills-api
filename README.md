@@ -53,6 +53,14 @@ Certifique-se de que o Docker e o Docker Compose estão instalados e execute:
 
    ```bash
    docker-compose up --build
+
+---
+
+🐳 Usando Docker
+Caso prefira executar via Docker:
+
+  ```bash
+  docker-compose up
    
 ---
 
@@ -72,14 +80,6 @@ Você pode utilizar ferramentas como Postman ou Insomnia para testar os endpoint
   - GET /transactions/dashboard – Obter balanço financeiro
   
   - GET /transactions/financial-evolution – Visualizar evolução mensal
-
----
-
-🐳 Usando Docker
-Caso prefira executar via Docker:
-
-  ```bash
-  docker-compose up
 
 ---
 
