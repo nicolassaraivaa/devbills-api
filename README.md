@@ -54,23 +54,26 @@ Certifique-se de que o Docker e o Docker Compose estão instalados e execute:
    ```bash
    docker-compose up --build
    
+---
 
 🧪 Testando a API
 Você pode utilizar ferramentas como Postman ou Insomnia para testar os endpoints.
 
   📁 Categorias
-    - GET /categories – Listar categorias
+  - GET /categories – Listar categorias
   
-    - POST /categories – Criar uma nova categoria
+  - POST /categories – Criar uma nova categoria
 
   💳 Transações
-    - GET /transactions – Listar transações
+  - GET /transactions – Listar transações
   
-    - POST /transactions – Criar nova transação
+  - POST /transactions – Criar nova transação
   
-    - GET /transactions/dashboard – Obter balanço financeiro
+  - GET /transactions/dashboard – Obter balanço financeiro
   
-    - GET /transactions/financial-evolution – Visualizar evolução mensal
+  - GET /transactions/financial-evolution – Visualizar evolução mensal
+
+---
 
 🐳 Usando Docker
 Caso prefira executar via Docker:
@@ -78,7 +81,7 @@ Caso prefira executar via Docker:
   ```bash
   docker-compose up
 
------------------------------------------------------------------------
+---
 
 ## 🔗 Repositórios Relacionados
 
