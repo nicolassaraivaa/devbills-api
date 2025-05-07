@@ -57,10 +57,8 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 🐳  **Usando Docker:**
 Para rodar o projeto com Docker, certifique-se de ter o Docker e o Docker Compose instalados. Em seguida, execute:
 
-   ```bash
   docker-compose up --build
-
-   
+ 
 ---
 
 🧪 Testando a API
