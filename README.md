@@ -48,19 +48,18 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
    Copie o arquivo .env.example para .env e preencha os valores necessários, como a URL do banco de dados MongoDB.
    
 
-5. **Inicie a aplicação com Docker:**
-Certifique-se de que o Docker e o Docker Compose estão instalados e execute:
-
-   ```bash
-   docker-compose up --build
+4. **Acesse a aplicação:**
+   
+   A API estará disponível em http://localhost:3333.
 
 ---
 
-🐳 Usando Docker
-Caso prefira executar via Docker:
+🐳  **Usando Docker:**
+Para rodar o projeto com Docker, certifique-se de ter o Docker e o Docker Compose instalados. Em seguida, execute:
 
-  ```bash
-  docker-compose up
+   ```bash
+  docker-compose up --build
+
    
 ---
 
